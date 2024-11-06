@@ -1,0 +1,43 @@
+/* Apply smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Define custom properties on the root element */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+}
+
+/* Set foreground color for the body */
+/* Update body and anchor colors to use the text-color variable */
+body {
+    color: var(--text-color);
+}
+
+/* Set foreground color for all anchor elements */
+a {
+    color: var(--text-color);
+}
+
+/* Hide elements with the class visually-hidden */
+/* Keep previous declarations for other elements as needed */
+.visually-hidden {
+display: none;
+}
+
+/* Set foreground color for elements with the class card-category */
+/* Update colors for .section-tagline and .card-category to use the primary color */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Set foreground color for elements with the class section-tagline */
+/* Update colors for .section-tagline and .card-category to use the primary color */
+.section-tagline {
+    color: var(--color-primary);
+}
