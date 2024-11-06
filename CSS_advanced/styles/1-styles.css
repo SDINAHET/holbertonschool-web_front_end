@@ -1,5 +1,4 @@
-/* File: CSS_advanced/styles/1-style.css */
-
+/* CSS smooth scrolling */
 html {
     scroll-behavior: smooth;
 }
