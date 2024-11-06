@@ -17,16 +17,11 @@
     --font-family-title: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
     --font-weight-regular: 400;
     --font-weight-bold: 700;
-    --font-family-base: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    --font-family-title: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-size-small: 1.2rem;
     --font-size-medium: 1.6rem;
     --font-size-large: 1.8rem;
     --font-size-x-large: 2.3rem;
     --font-size-xx-large: 4.8rem;
-    --font-weight-regular: 400;
-    --font-weight-bold: 700;
-
 }
 
 /* Set font size for the html element to 62.5% of the normal size */
