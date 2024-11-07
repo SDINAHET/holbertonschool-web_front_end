@@ -163,7 +163,7 @@ template {
     --nav-item-font-size: var(--font-size-medium);
     --nav-item-letter-spacing: 4%;
     --nav-item-display: inline-block;
-    --nav-item-margin: calc(62.5% * 3) 0 calc(62.5% * 3) 0; /* 3x root element margin on bottom */
+    --nav-item-margin: calc(62.5% * 3) 0 calc(62.5% * 3) 0;
     --nav-item-link-hover: var(--color-primary);
 }
 
@@ -282,37 +282,31 @@ a:active {
     background-color: var(--color-light-grey);
 }
 
-/* Target navbar-menu to float right */
 .navbar-menu {
-    float: right;
+	float: right;
 }
 
-/* Style for nav class */
-nav {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: center;
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
 }
 
-/* Style for nav-item class in nav */
-.nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
+.nav .nav-item {
+	font-family: var(--nav-item-font-family);
+	font-weight: var(--nav-item-font-weight);
+	font-size: var(--nav-item-font-size);
+	letter-spacing: var(--nav-item-letter-spacing);
+	display: var(--nav-item-display);
+	margin: var(--nav-item-margin);
 }
 
-/* Style for nav-link class in nav */
-.nav-link {
-    display: block;
-    /* padding: calc(62.5% / 2) calc(62.5%); 50% of root element for top/bottom, 100% for left/right */
-    padding: 0.5rem 1rem;
+.nav .nav-link {
+	display: block;
+	padding: 0.5rem 1rem;
 }
 
-/* Hover effect for nav-link class in nav */
-.nav-link:hover {
-    color: var(--nav-item-link-hover);
+.nav .nav-link:hover {
+	color: var(--nav-item-link-hover);
 }
