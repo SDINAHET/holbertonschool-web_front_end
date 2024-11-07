@@ -377,6 +377,6 @@ ul.row {
 }
 
 /* Style the svg children within the social-link class */
-.social-link svg {
+.social-link > svg {
     fill: var(--text-color); /* Set the fill color of svg children to the text-color variable */
 }
