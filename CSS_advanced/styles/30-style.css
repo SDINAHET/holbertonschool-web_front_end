@@ -490,21 +490,19 @@ ul.row {
     left: var(--header-logo-link-left);
 }
 
-/* nav-link before pseudo-elements inside nav */
 .nav .nav-link::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: var(--color-white);
-    width: 0;
-    height: 20%;
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--color-white);
+	width: 0;
+	height: 0.2rem;
 }
 
-/* nav-link before pseudo-elements on hover within nav-item inside nav */
 .nav .nav-item:hover .nav-link::before {
-    background-color: var(--color-primary);
-    width: 100%;
+	background-color: var(--color-primary);
+	width: 100%;
 }
 
 /* Targeting .card-outer within .card-work */
