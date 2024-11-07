@@ -1,0 +1,466 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+body {
+    margin: 0;
+}
+main {
+    display: block;
+}
+h1 {
+    font-size: 2em;
+    margin: .67em 0;
+}
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
+pre {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+a {
+    background-color: transparent;
+}
+abbr[title] {
+    border-bottom: none;
+    text-decoration: underline;
+    text-decoration: underline dotted;
+}
+b, strong {
+    font-weight: bolder;
+}
+code, kbd, samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+small {
+    font-size: 80%;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sub {
+    bottom: -.25em;
+}
+sup {
+    top: -.5em;
+}
+img {
+    border-style: none;
+}
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+button, input {
+    overflow: visible;
+}
+button, select {
+    text-transform: none;
+}
+[type=button], [type=reset], [type=submit], button {
+    -webkit-appearance: button;
+}
+[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+fieldset {
+    padding: .35em .75em .625em;
+}
+legend {
+    box-sizing: border-box;
+    color: inherit;
+    display: table;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+progress {
+    vertical-align: baseline;
+}
+textarea {
+    overflow: auto;
+}
+[type=checkbox], [type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
+    height: auto;
+}
+[type=search] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px;
+}
+[type=search]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+details {
+    display: block;
+}
+summary {
+    display: list-item;
+}
+template {
+    display: none;
+}
+[hidden] {
+    display: none;
+}
+
+/* Integrate Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Define custom properties on the root element */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+    --font-family-base: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+    --section-header-align: center;
+    --section-tagline-transform: uppercase;
+    --section-title-margin: 0;
+    --section-title-color: var(--color-black);
+    --section-padding: 5rem 0;
+    --section-header-padding: 0 0 3rem;
+    --section-body-padding: 0 0 3rem;
+    --section-footer-padding: 3rem 0 0;
+    --section-footer-align: center;
+    --footer-padding: 5rem 0 1rem;
+    --nav-item-font-family: var(--font-family-title);
+    --nav-item-font-weight: var(--font-weight-bold);
+    --nav-item-font-size: var(--font-size-medium);
+	--nav-item-letter-spacing: 0.04rem;
+    --nav-item-display: inline-block;
+	--nav-item-margin: 0 0 3rem 0;
+    --nav-item-link-hover: var(--color-primary);
+    --section-tagline-margin: 0;
+    --button-display: inline-block;
+    --button-padding: 1.5rem 3rem;
+    --button-border: 0.2rem solid var(--color-primary);
+    --button-color: var(--color-black);
+    --button-text-decoration: none;
+    --button-font-size: var(--font-size-large);
+    --button-hover-color: var(--color-white);
+    --button-hover-text-decoration: none;
+    --button-hover-background: var(--color-primary);
+}
+
+/* Universal box-sizing rule */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Set font size for the html element to 62.5% of the normal size */
+html {
+    font-size: 62.5%; /* This sets the base size to 10px (because 1rem = 10px at 100%) */
+    scroll-behavior: smooth; /* Apply smooth scrolling */
+}
+
+/* Set foreground color for the body */
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+/* Apply title font-family to all heading levels */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Set foreground color for all anchor elements */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Hide elements with the class visually-hidden */
+.visually-hidden {
+    display: none;
+}
+
+/* Set foreground color for elements with the class card-category */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Apply padding to the .section class */
+.section {
+    padding: var(--section-padding);
+}
+
+/* Apply the alignment to section-header class */
+.section-header {
+    text-align: var(--section-header-align);
+    padding: var(--section-header-padding);
+}
+
+/* Apply padding to the .section-body class */
+.section-body {
+    padding: var(--section-body-padding);
+}
+
+/* Apply padding and alignment to the .section-footer class */
+.section-footer {
+    padding: var(--section-footer-padding);
+    text-align: var(--section-footer-align);
+}
+
+/* Apply padding to the .footer class */
+.footer {
+    padding: var(--footer-padding);
+}
+
+/* Styling for section-title */
+.section-title {
+    font-family: var(--font-family-title);
+    font-size: var(--font-size-xx-large);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-title-margin);
+    color: var(--section-title-color);
+}
+
+/* Styling for section-tagline */
+.section-tagline {
+    color: var(--color-primary);
+    font-family: var(--font-family-title);
+    text-transform: var(--section-tagline-transform);
+    font-weight: var(--font-weight-bold);
+    margin: var(--section-tagline-margin);
+}
+
+/* Targeting the container class */
+.container {
+    width: 960px; /* Set the width to 960px */
+    margin-left: auto; /* Evenly distribute the margin on the left side */
+    margin-right: auto; /* Evenly distribute the margin on the right side */
+}
+
+/* Targeting anchor elements with hyperlinks */
+a:link {
+    font-style: italic;
+}
+
+/* Targeting visited links */
+a:visited {
+    font-style: italic;
+}
+
+/* Targeting hover state for links */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Targeting active state for links */
+a:active {
+    background-color: var(--color-light-grey);
+}
+
+.navbar-menu {
+	float: right;
+}
+
+.nav {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+.nav .nav-item {
+	font-family: var(--nav-item-font-family);
+	font-weight: var(--nav-item-font-weight);
+	font-size: var(--nav-item-font-size);
+	letter-spacing: var(--nav-item-letter-spacing);
+	display: var(--nav-item-display);
+	margin: var(--nav-item-margin);
+}
+
+.nav .nav-link {
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+.nav .nav-link:hover {
+	color: var(--nav-item-link-hover);
+}
+
+/* Styling for all ul elements with the class row */
+ul.row {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Styling for col-1-3 class */
+.col-1-3 {
+    width: 33.33%;
+    /* float: left; */
+    /* padding: 0.5rem; */
+}
+
+/* Styling for col-1-2 class */
+.col-1-2 {
+    width: 50%;
+    /* float: left; */
+    /* padding: 0.5rem; */
+}
+
+/* Styling for footer-copyright class */
+.footer-copyright {
+    margin: 0;
+    font-size: var(--font-size-small);
+    color: var(--text-color);
+}
+
+/* Align text to the right for all ul elements within the footer */
+.footer ul {
+    text-align: right;
+}
+
+/* Clear the context of the grid after each .row */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Apply to all classes that start with col- */
+[class^="col-"] {
+    float: left;
+    padding: 0.5rem;
+}
+
+/* Target elements with the data-section-theme="dark" */
+[data-section-theme="dark"] {
+	background-color: var(--color-black);
+	--text-color: var(--color-white);
+	--section-title-color: var(--color-white);
+}
+
+/* Style the footer-address class */
+.footer-address {
+    color: var(--text-color); /* Set the text color to the text-color variable */
+}
+
+/* Style the social-link class */
+.social-link {
+    display: block; /* Make social-link a block element */
+}
+
+/* Style the svg children within the social-link class */
+.social-link > svg {
+    fill: var(--text-color); /* Set the fill color of svg children to the text-color variable */
+}
+
+/* Target card-title inside card-services */
+.card-services .card-title {
+    margin: 0; /* Remove all margins */
+}
+
+/* Target a inside card-services */
+.card-services a {
+    display: block; /* Render as block-level elements */
+    padding: 2rem; /* Set padding to 2 times the root element */
+    background-color: var(--color-light-grey); /* Set background color */
+}
+
+/* Hover state for a inside card-services */
+.card-services a:hover {
+    color: var(--color-white); /* Set foreground color on hover */
+    background-color: var(--color-primary); /* Set background color on hover */
+    text-decoration: none; /* Remove text decoration */
+}
+
+/* Button class selector styling */
+.button {
+    display: var(--button-display);
+    padding: var(--button-padding);
+    border: var(--button-border);
+    font-size: var(--button-font-size);
+    color: var(--button-color);
+    text-decoration: var(--button-text-decoration);
+}
+
+/* Hover state for button class selector */
+.button:hover {
+    color: var(--button-hover-color);
+    text-decoration: var(--button-hover-text-decoration);
+    background-color: var(--button-hover-background);
+}
+
+/* Data-section-theme="dark" styling for button */
+[data-section-theme="dark"] {
+    --button-color: var(--color-white);
+}
+
+/* Style for card-testimonial */
+.card-testimonial {
+    text-align: center;
+}
+
+/* Style for card-avatar inside card-testimonial */
+.card-testimonial .card-avatar {
+    border-radius: 50%;
+    width: 10rem; /* 10 times the root element */
+    height: 10rem; /* 10 times the root element */
+}
+
+/* Style for <cite> inside card-quote inside card-testimonial */
+.card-testimonial .card-quote cite {
+    display: block;
+    padding-top: 1rem; /* 1 times the root element */
+    color: var(--color-primary);
+}
+
+/* Style for section-hero */
+.section-hero {
+    background-size: 90rem auto; /* Width set to 90rem, height to auto */
+}
+
+/* Target section-title inside section-hero */
+.section-hero .section-title {
+    margin-bottom: 5rem;
+}
+
+/* Target section-inner inside section-hero */
+.section-hero .section-inner {
+    padding: 10rem 40rem 2rem 0;
+}
