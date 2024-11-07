@@ -493,7 +493,7 @@ ul.row {
 /* Edit the nav-item-link-hover property to set it to the color-white variable */
 .nav-item .nav-link:hover {
     color: var(--color-white);  /* Assuming you have the --color-white variable defined in your CSS */
-  }
+}
 
 /* nav-link before pseudo-elements inside nav */
 .nav .nav-link::before {
