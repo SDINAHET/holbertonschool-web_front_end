@@ -361,7 +361,7 @@ ul.row {
 
 /* Target elements with the data-section-theme="dark" */
 [data-section-theme="dark"] {
-    --text-color: white;            /* Redefine text-color to white */
-    --section-title-color: white;   /* Redefine section-title-color to white */
-    background: var(--color-black); /* Set the background to the color-black variable */
+	background-color: var(--color-black);
+	--text-color: var(--color-white);
+	--section-title-color: var(--color-white);
 }
