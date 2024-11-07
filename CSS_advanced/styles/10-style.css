@@ -1,0 +1,87 @@
+/* Integrate Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+/* Define custom properties on the root element */
+/* Define custom properties for font families on the root element Helvetica Neue.... */
+/* Define custom properties for font sizes in the root element */
+/* Define custom properties for font weights in the root element */
+/* Define custom properties for font families */
+/* Define custom property for section header alignment */
+:root {
+    --color-primary: #d73953;
+    --color-black: #090909;
+    --color-white: #ffffff;
+    --color-light-grey: #f3f3f3;
+    --color-dark-grey: #353535;
+    --text-color: var(--color-black);
+    --font-family-base: 'Open Sans', Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-family-title: 'Raleway', Helvetica Neue, Helvetica, Arial, sans-serif;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-size-small: 1.2rem;
+    --font-size-medium: 1.6rem;
+    --font-size-large: 1.8rem;
+    --font-size-x-large: 2.3rem;
+    --font-size-xx-large: 4.8rem;
+    --line-height-small: 1.2;
+    --line-height-base: 1.5;
+    --line-height-big: 1.8;
+    --section-header-align: center;
+}
+
+/* Set font size for the html element to 62.5% of the normal size */
+html {
+    font-size: 62.5%; /* This sets the base size to 10px (because 1rem = 10px at 100%) */
+    scroll-behavior: smooth; /* Apply smooth scrolling */
+}
+
+/* Set foreground color for the body */
+/* Update body and anchor colors to use the text-color variable */
+/* Apply base font-family to the body */
+/* Set font size for the body to use the custom medium size */
+/* Set font-weight for the body to use the regular weight */
+/* Apply minimum line height for body */
+body {
+    font-family: var(--font-family-base);
+    color: var(--text-color);
+    font-size: var(--font-size-medium);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-base);
+}
+
+/* Apply title font-family to all heading levels */
+/* Set font-weight for all headings (h1 to h6) to use the bold weight */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-title);
+    font-weight: var(--font-weight-bold);
+}
+
+/* Set foreground color for all anchor elements */
+/* Remove text decoration from anchor elements */
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Hide elements with the class visually-hidden */
+/* Keep previous declarations for other elements as needed */
+.visually-hidden {
+display: none;
+}
+
+/* Set foreground color for elements with the class card-category */
+/* Update colors for .section-tagline and .card-category to use the primary color */
+.card-category {
+    color: var(--color-primary);
+}
+
+/* Apply the alignment to section-header class */
+.section-header {
+    text-align: var(--section-header-align);
+}
+
+/* Set foreground color for elements with the class section-tagline */
+/* Update colors for .section-tagline and .card-category to use the primary color */
+.section-tagline {
+    color: var(--color-primary);
+}
