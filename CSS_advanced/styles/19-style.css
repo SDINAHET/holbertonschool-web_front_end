@@ -345,3 +345,10 @@ ul.row {
 .footer ul {
     text-align: right;
 }
+
+/* Clear the context of the grid after each .row */
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
