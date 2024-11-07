@@ -167,6 +167,34 @@ template {
     --nav-item-link-hover: var(--color-primary);
 }
 
+.navbar-menu {
+    float: right;
+}
+
+nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+}
+
+.nav-link {
+    display: block;
+    padding: calc(62.5% / 2) calc(62.5%); /* 50% of root element for top/bottom, 100% for left/right */
+}
+
+.nav-link:hover {
+    color: var(--nav-item-link-hover);
+}
+
 /* Universal box-sizing rule */
 *,
 *::before,
@@ -280,32 +308,4 @@ a:hover {
 /* Targeting active state for links */
 a:active {
     background-color: var(--color-light-grey);
-}
-
-.navbar-menu {
-    float: right;
-  }
-
-nav {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-.nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
-}
-
-.nav-link {
-    display: block;
-    padding: calc(62.5% / 2) calc(62.5%); /* 50% of root element for top/bottom, 100% for left/right */
-}
-
-.nav-link:hover {
-    color: var(--nav-item-link-hover);
 }
