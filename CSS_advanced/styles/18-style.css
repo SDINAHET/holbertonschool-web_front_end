@@ -128,39 +128,6 @@ template {
 /* Integrate Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
 
-/* Target navbar-menu to float right */
-.navbar-menu {
-    float: right;
-}
-
-/* Style for nav class */
-nav {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-/* Style for nav-item class in nav */
-.nav-item {
-    font-family: var(--nav-item-font-family);
-    font-weight: var(--nav-item-font-weight);
-    font-size: var(--nav-item-font-size);
-    letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
-    margin: var(--nav-item-margin);
-}
-
-/* Style for nav-link class in nav */
-.nav-link {
-    display: block;
-    padding: calc(62.5% / 2) calc(62.5%); /* 50% of root element for top/bottom, 100% for left/right */
-}
-
-/* Hover effect for nav-link class in nav */
-.nav-link:hover {
-    color: var(--nav-item-link-hover);
-}
-
 /* Define custom properties on the root element */
 :root {
     --color-primary: #d73953;
@@ -313,4 +280,37 @@ a:hover {
 /* Targeting active state for links */
 a:active {
     background-color: var(--color-light-grey);
+}
+
+/* Target navbar-menu to float right */
+.navbar-menu {
+    float: right;
+}
+
+/* Style for nav class */
+nav {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Style for nav-item class in nav */
+.nav-item {
+    font-family: var(--nav-item-font-family);
+    font-weight: var(--nav-item-font-weight);
+    font-size: var(--nav-item-font-size);
+    letter-spacing: var(--nav-item-letter-spacing);
+    display: var(--nav-item-display);
+    margin: var(--nav-item-margin);
+}
+
+/* Style for nav-link class in nav */
+.nav-link {
+    display: block;
+    padding: calc(62.5% / 2) calc(62.5%); /* 50% of root element for top/bottom, 100% for left/right */
+}
+
+/* Hover effect for nav-link class in nav */
+.nav-link:hover {
+    color: var(--nav-item-link-hover);
 }
