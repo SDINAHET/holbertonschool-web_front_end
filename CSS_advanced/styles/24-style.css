@@ -380,3 +380,22 @@ ul.row {
 .social-link > svg {
     fill: var(--text-color); /* Set the fill color of svg children to the text-color variable */
 }
+
+/* Target card-title inside card-services */
+.card-services .card-title {
+    margin: 0; /* Remove all margins */
+}
+
+/* Target a inside card-services */
+.card-services a {
+    display: block; /* Render as block-level elements */
+    padding: 2rem; /* Set padding to 2 times the root element */
+    background-color: var(--color-light-grey); /* Set background color */
+}
+
+/* Hover state for a inside card-services */
+.card-services a:hover {
+    color: var(--color-white); /* Set foreground color on hover */
+    background-color: var(--color-primary); /* Set background color on hover */
+    text-decoration: none; /* Remove text decoration */
+}
