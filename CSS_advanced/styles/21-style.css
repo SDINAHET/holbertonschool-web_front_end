@@ -356,7 +356,7 @@ ul.row {
 /* Apply to all classes that start with col- */
 [class^="col-"] {
     float: left;
-    padding: 50%; /* Set padding to half of the root element */
+    padding: 0.5rem;
 }
 
 /* Remove the common properties from specific col-1-3 and col-1-2 classes */
