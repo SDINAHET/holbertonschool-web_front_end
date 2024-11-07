@@ -581,3 +581,39 @@ ul.row {
     font-size: 10rem;
     z-index: -1;
 }
+
+/* Custom Properties */
+:root {
+    --transition-duration: .3s;
+    --transition-cubic-bezier: cubic-bezier(0.17, 0.67, 0, 1.01);
+}
+
+/* Transformations on the card-work hover state */
+.card-work:hover .card-image {
+    transform: scale(1.2);
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work:hover .card-outer {
+    transform: scale(0.95);
+}
+
+/* Animations on the navigation items */
+.nav .nav-link::before {
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+/* Button background animation on hover */
+.button:hover {
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
+}
+
+/* Transitions on the card-work */
+.card-work:hover .card-image {
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
+
+.card-work .card-inner {
+    transition: var(--transition-duration) var(--transition-cubic-bezier);
+}
