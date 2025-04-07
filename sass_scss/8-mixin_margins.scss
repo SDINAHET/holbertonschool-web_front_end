@@ -1,1 +1,14 @@
-1
+/* Task 8 - Margin mixin */
+@mixin set-margins($value) {
+    margin-left: $value;
+    margin-right: $value;
+  }
+  
+  body {
+    @include set-margins(10px);
+  }
+  
+  div {
+    @include set-margins(15px);
+  }
+  
