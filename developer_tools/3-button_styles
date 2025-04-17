@@ -44,4 +44,6 @@ user-select: none;
 vertical-align: middle;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 border-color: #f8f9fa;
+border: 0.125rem solid transparent;
+
 
