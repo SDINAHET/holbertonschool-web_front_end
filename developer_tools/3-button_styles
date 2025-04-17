@@ -43,3 +43,5 @@ transition-timing-function: ease-in-out, ease-in-out, ease-in-out, ease-in-out;
 user-select: none;
 vertical-align: middle;
 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+border-color: #f8f9fa;
+
