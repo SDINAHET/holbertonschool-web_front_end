@@ -45,6 +45,8 @@ vertical-align: middle;
 border-color: #f8f9fa;
 border: 0.125rem solid transparent;
 line-height: 1.5;
+border-radius: 0.5rem;
+
 
 
 
