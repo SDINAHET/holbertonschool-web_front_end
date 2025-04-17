@@ -21,7 +21,7 @@ border-top-right-radius: 8px;
 border-top-style: solid;
 border-top-width: 1.6px;
 box-sizing: border-box;
-color: rgb(33, 37, 41);
+color: #f8f9fa;
 cursor: pointer;
 display: inline-block;
 font-family: Lato, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
