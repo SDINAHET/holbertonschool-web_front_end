@@ -182,19 +182,15 @@
       ============================= */
 
   ul.row {
+    display: flex;
     margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .row::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
 
   [class*='col-'] {
-    float: left;
+    /* float: left; <-- à supprimer */
     padding: 0.5rem;
   }
 
@@ -502,4 +498,3 @@
     font-size: 10rem;
     z-index: -1;
   }
-    
