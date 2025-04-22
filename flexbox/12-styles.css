@@ -585,7 +585,7 @@
 /* Section HERO (article)
     ============================= */
 
-.hero-article {
+  .hero-article {
     background-size: 150rem 100rem;
     background-position: 50% 0;
     position: relative;
@@ -616,3 +616,23 @@
     padding: 7rem 0 0;
     z-index: 2;
   }
+
+  /* Post
+    ============================= */
+  .main-article {
+    padding: 5rem 0;
+  }
+
+  .post {
+    display: flex;
+  }
+
+  .post-content {
+    width: 100%;
+  }
+
+  .post-aside {
+    order: -1;
+    min-width: 20%;
+  }
+
