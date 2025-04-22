@@ -231,9 +231,14 @@
     font-weight: var(--nav-item-font-weight);
     font-size: var(--nav-item-font-size);
     letter-spacing: var(--nav-item-letter-spacing);
-    display: var(--nav-item-display);
+    /* display: var(--nav-item-display); */
     margin: var(--nav-item-margin);
   }
+
+  .nav .nav-item + .nav-item {
+    margin: var(--nav-item-margin);
+  }
+
 
   .nav .nav-link {
     display: block;
@@ -261,6 +266,11 @@
     background-color: var(--color-primary);
     width: 100%;
   }
+
+  .nav {
+    display: flex;
+  }
+
 
   /* Header
       ============================= */
