@@ -181,6 +181,10 @@
   /* Grid
       ============================= */
 
+  .row {
+    display: flex;
+  }
+
   ul.row {
     display: flex;
     margin: 0;
