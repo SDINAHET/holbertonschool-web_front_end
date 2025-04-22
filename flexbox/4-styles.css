@@ -187,7 +187,8 @@
 
   ul.row {
     display: flex;
-    margin: 0;
+    /* margin: 0; */
+    margin: -1rem; /* ✅ important : pour compenser les marges des colonnes */
     padding: 0;
     list-style: none;
   }
@@ -195,15 +196,18 @@
 
   [class*='col-'] {
     /* float: left; <-- à supprimer */
-    padding: 0.5rem;
+    /* padding: 0.5rem; */ /* ❌ à supprimer */
+    margin: 1rem;     /* ✅ à ajouter */
   }
 
   .col-1-3 {
-    width: 33.33%;
+    /* width: 33.33%; */
+    width: calc((100% / 3) - 2rem); /* ✅ */
   }
 
   .col-1-2 {
-    width: 50%;
+    /* width: 50%; */
+    width: calc((100% / 2) - 2rem); /* ✅ */
   }
 
   /* Navbar
