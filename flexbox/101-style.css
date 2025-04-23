@@ -1,3 +1,7 @@
+body {
+    background-color: #f0f3fa;
+}
+
 .container {
     display: flex;
     justify-content: center;
@@ -9,44 +13,57 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Georgia', serif;
+    font-family: Georgia, serif;
     color: white;
-    height: 50px;
 }
 
-/* Espacement entre les boîtes sans utiliser margin/padding */
-.box:not(:last-child) {
-    border-right: 10px solid transparent; /* simule l'espacement */
+/* Espacement simulé sans margin/padding */
+.box1::after,
+.box2::after,
+.box3::after,
+.box4::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
 }
 
-/* Personnalisation de chaque box */
+/* Boîte 1 (plus petite) */
 .box1 {
-    background-color: #2ecc71;
-    width: 60px;
-    font-size: 14px;
+    background-color: #76d7c4;
+    width: 60px;  /* réduit */
+    height: 40px;
+    font-size: 11px;
 }
 
+/* Boîte 2 (moyenne) */
 .box2 {
-    background-color: #3498db;
+    background-color: #5dade2;
     width: 80px;
+    height: 50px;
     font-size: 20px;
 }
 
+/* Boîte 3 (centrale, grande, avec police plus légère) */
 .box3 {
-    background-color: #2c3e50;
+    background-color: #5d6d7e;
     width: 160px;
     height: 100px;
     font-size: 48px;
+    font-family: 'Times New Roman', serif; /* plus fine que Georgia */
 }
 
+/* Boîte 4 (moyenne) */
 .box4 {
-    background-color: #9b59b6;
+    background-color: #af7ac5;
     width: 80px;
+    height: 50px;
     font-size: 20px;
 }
 
+/* Boîte 5 (plus petite) */
 .box5 {
-    background-color: #e67e22;
-    width: 60px;
-    font-size: 14px;
+    background-color: #eb984e;
+    width: 60px;  /* réduit */
+    height: 40px;
+    font-size: 11px;
 }
