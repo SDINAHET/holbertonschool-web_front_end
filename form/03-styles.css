@@ -679,4 +679,15 @@
     padding: 0 0 2rem;
   }
 
+  /* Label
+   ============================= */
+   label {
+    cursor: pointer;
+    display: block;
+    white-space: nowrap;
+    font-size: 1.4rem;
+    padding: 0 0 0.5rem;
+  }
+
+
 
