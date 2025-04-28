@@ -690,6 +690,17 @@
     padding: 0 0 0.5rem;
   }
 
+  .form-field-container {
+    display: block;
+    /* background-color: var(--color-light-grey); */
+    padding: 1rem;
+  }
+  .form-field-container:has(input:focus),
+  .form-field-container:has(textarea:focus) {
+    background-color: var(--color-light-grey);
+  }
+
+
   /* Style for input text, email, textarea */
 input[type="text"],
 input[type="email"],
@@ -711,11 +722,13 @@ input[type="email"] {
 }
 
 /* Focus style */
+/* input[type="text"]:focus ~ .form-field-container, */
+/* input[type="email"]:focus ~ .form-field-container, */
 input[type="text"]:focus,
 input[type="email"]:focus,
 textarea:focus {
   border: 0.1rem solid var(--color-grey);
-  background-color: var(--color-light-grey);
+  /* background-color: var(--color-light-grey); */
 }
 
 /* Placeholder style */
