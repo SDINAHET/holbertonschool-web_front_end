@@ -141,6 +141,7 @@
     font-size: var(--button-font-size);
     color: var(--button-color);
     text-decoration: var(--button-text-decoration);
+    background-color: var(--color-white); /* <-- AJOUT OBLIGATOIRE */
   }
 
   .button:hover {
@@ -663,10 +664,10 @@
   /* Basic form
       ============================= */
   form {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem 0;
-  margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    margin: 0;
   }
 
   /* Fieldset
@@ -681,7 +682,7 @@
 
   /* Label
    ============================= */
-   label {
+  label {
     cursor: pointer;
     display: block;
     white-space: nowrap;
