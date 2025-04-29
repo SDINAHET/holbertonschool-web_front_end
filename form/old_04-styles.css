@@ -731,28 +731,11 @@ textarea:focus {
   /* background-color: var(--color-light-grey); */
 }
 
-.form-group {
-  transition: background-color 0.3s ease;
-  padding: 1rem;
-  border-radius: 0.4rem;
-}
-
-/* Appliquer le fond gris si un input à l'intérieur est focus */
-.form-group:has(input:focus),
-.form-group:has(textarea:focus) {
-  background-color: var(--color-light-grey);
-}
-
-.form-field-container:has(input:focus),
-.form-field-container:has(textarea:focus) {
-  background-color: var(--color-light-grey);
-  /* padding: 0.5rem; */
-  /* border-radius: 0.3rem; */
-  box-shadow: 0 0 0.3rem rgba(0, 0, 0, 0.1);
-}
-
 /* Placeholder style */
 ::placeholder {
   font-style: italic;
   font-size: var(--font-size-small);
 }
+
+
+
