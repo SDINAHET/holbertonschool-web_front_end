@@ -744,7 +744,8 @@ textarea:focus {
 /* Form group
 ============================= */
 .form-group {
-  transition: background-color 0.3s ease;
+  /* transition: background-color 0.3s ease; */
+  background-color: var(--color-white);
   padding: 1rem;
   border-radius: 0.4rem;
 }
@@ -787,3 +788,9 @@ textarea:focus {
   max-height: 20rem;
   margin: .4rem 0 0;
 }
+
+.form-group:focus-within {
+  background-color: var(--color-light-grey);
+  transition: .3s;
+}
+
