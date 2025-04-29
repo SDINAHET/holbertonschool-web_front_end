@@ -747,6 +747,7 @@ textarea:focus {
   /* transition: background-color 0.3s ease; */
   background-color: var(--color-white);
   padding: 1rem;
+  margin: 0;
   border-radius: 0.4rem;
 }
 
