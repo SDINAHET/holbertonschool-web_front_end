@@ -741,6 +741,8 @@ textarea:focus {
   /* background-color: var(--color-light-grey); */
 }
 
+/* Form group
+============================= */
 .form-group {
   transition: background-color 0.3s ease;
   padding: 1rem;
