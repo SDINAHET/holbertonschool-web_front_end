@@ -79,6 +79,7 @@
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 0 2rem;
     --nav-item-link-hover: var(--color-white);
+    --nav-item-margin: 0;
 
     /** BUTTON **/
     --button-display: inline-block;
@@ -298,6 +299,63 @@
     .navbar-menu {
       display: none;
     }
+  }
+
+
+  /* Menu bouton caché */
+  .menu-btn {
+    display: none;
+  }
+
+  /* Icône du menu hamburger */
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+  }
+
+  /* Barres du menu hamburger */
+  .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+
+  .menu-icon .navicon:before,
+  .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  .menu-icon .navicon:before {
+    top: 5px;
+  }
+
+  .menu-icon .navicon:after {
+    top: -5px;
+  }
+
+  /* Menu caché par défaut */
+  .header .nav {
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+  }
+
+  /* Quand la checkbox est cochée, on affiche le menu */
+  .menu-btn:checked ~ .navbar-menu .nav {
+    max-height: 500px; /* assez grand pour afficher tous les liens */
   }
 
 
