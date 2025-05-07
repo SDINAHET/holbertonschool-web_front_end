@@ -918,6 +918,12 @@
     padding: 5rem 0;
   }
 
+  .article-page .section-hero {
+    margin-top: -8.5rem;
+    padding-top: 5rem;
+  }
+
+
   /* Post
       ============================= */
 
