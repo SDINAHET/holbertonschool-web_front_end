@@ -79,7 +79,7 @@
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 0 2rem;
     --nav-item-link-hover: var(--color-white);
-    --nav-item-margin: 0;
+    /* --nav-item-margin: 0; */
 
     /** BUTTON **/
     --button-display: inline-block;
@@ -301,7 +301,7 @@
     }
   }
 
-  /* menu btn */
+
   /* Menu bouton caché */
   .menu-btn {
     display: none;
@@ -358,7 +358,43 @@
     max-height: 500px; /* assez grand pour afficher tous les liens */
   }
 
+  /* menu btn */
 
+  /* Cacher le bouton menu sur desktop */
+  .header .menu-icon {
+    display: none;
+  }
+
+  /* Masquer la checkbox */
+  .header .menu-btn {
+    display: none;
+  }
+
+  /* Quand le menu-btn est coché, afficher le menu */
+  .header .menu-btn:checked ~ .navbar-menu {
+    display: block;
+  }
+
+  /* Quand le menu-btn est coché, déplier le menu */
+  .header .menu-btn:checked ~ .navbar-menu .nav {
+    max-height: 100%;
+    overflow: inherit;
+  }
+
+  /* Animation burger → X */
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
 
 
   /* Header
@@ -412,34 +448,6 @@
 
   .header .menu-icon .navicon::after {
     top: -0.7rem;
-  }
-
-  /* menu btn */
-  .header .menu-btn {
-    display: none;
-  }
-
-  .header .menu-btn:checked ~ .navbar-menu {
-    display: block;
-  }
-
-  .header .menu-btn:checked ~ .navbar-menu .nav {
-    max-height: 100%;
-    overflow: inherit;
-  }
-
-  .header .menu-btn:checked ~ .menu-icon .navicon {
-    background: transparent;
-  }
-
-  .header .menu-btn:checked ~ .menu-icon .navicon::before {
-    transform: rotate(-45deg);
-    top: 0;
-  }
-
-  .header .menu-btn:checked ~ .menu-icon .navicon::after {
-    transform: rotate(45deg);
-    top: 0;
   }
 
 
@@ -574,19 +582,28 @@
     min-height: 35vh;
   }
 
-  @media screen and (max-width: 767px) {
-    .section-hero {
-      margin: -0.1rem 0;
+
+  @media screen and (min-width: 768px) {
+    .navbar-menu {
+      display: block !important;
     }
 
-    .hero-homepage {
-      background-position: 85% 0;
+    .navbar-menu .nav {
+      display: flex !important;
+      flex-direction: row;
+      max-height: none;
+      overflow: visible;
     }
 
-    .section-hero .section-body {
-      padding: 2rem;
+    .header .menu-icon {
+      display: none !important;
+    }
+
+    .menu-btn {
+      display: none !important;
     }
   }
+
 
   @media screen and (max-width: 767px) {
     :root {
@@ -605,6 +622,48 @@
     .header .menu-icon {
       display: block;
     }
+
+    .section-hero {
+      margin: -0.1rem 0;
+    }
+
+    .hero-homepage {
+      background-position: 85% 0;
+    }
+
+    .section-hero .section-body {
+      padding: 2rem;
+    }
+
+    /* .navbar-menu {
+      display: none;
+    } */
+
+    .navbar-menu {
+      display: block;
+      width: 100%;
+    }
+
+    .navbar-menu .nav {
+      flex-direction: column;
+      align-items: center; /* Centre les éléments horizontalement */
+      justify-content: center;
+      text-align: center;
+    }
+
+    .nav .nav-item {
+      width: 100%;
+      text-align: center;
+    }
+
+    .menu-btn:checked ~ .navbar-menu {
+      display: block;
+    }
+
+    .menu-btn:checked ~ .navbar-menu .nav {
+      max-height: 100%;
+      overflow: inherit;
+    }
   }
 
   @media screen and (max-width: 480px) {
@@ -619,32 +678,19 @@
     }
   }
 
-  /* Cacher le menu burger en mode desktop */
-  @media screen and (min-width: 768px) {
-    .header .menu-icon {
-      display: none;
-    }
-  }
-
- 
-
-
-
-
-
-
   /* Section Latest news
-      ============================= */
+    ============================= */
 
-  .section-latest-news .row {
-    flex-direction: row-reverse;
-  }
-
-  @media screen and (max-width: 767px) {
     .section-latest-news .row {
-      flex-direction: column;
+      flex-direction: row-reverse;
     }
-  }
+
+    @media screen and (max-width: 767px) {
+      .section-latest-news .row {
+        flex-direction: column;
+      }
+    }
+
 
 
   /* Section SERVICES
