@@ -79,7 +79,7 @@
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 0 2rem;
     --nav-item-link-hover: var(--color-white);
-    /* --nav-item-margin: 0; */
+    --nav-item-margin: 0;
 
     /** BUTTON **/
     --button-display: inline-block;
@@ -301,7 +301,7 @@
     }
   }
 
-
+  /* menu btn */
   /* Menu bouton caché */
   .menu-btn {
     display: none;
@@ -359,6 +359,8 @@
   }
 
 
+
+
   /* Header
       ============================= */
 
@@ -412,8 +414,6 @@
     top: -0.7rem;
   }
 
-
-  /* menu btn */
   /* menu btn */
   .header .menu-btn {
     display: none;
@@ -426,46 +426,21 @@
   .header .menu-btn:checked ~ .navbar-menu .nav {
     max-height: 100%;
     overflow: inherit;
-
-    /* Ajout pour centrer */
-    display: flex;
-    flex-direction: column;
-    align-items: center;         /* Centrage horizontal */
-    justify-content: center;     /* Centrage vertical */
-    height: 40vh;               /*Hauteur pleine page*/
   }
 
-  /* Animation hamburger */
   .header .menu-btn:checked ~ .menu-icon .navicon {
     background: transparent;
   }
 
   .header .menu-btn:checked ~ .menu-icon .navicon::before {
     transform: rotate(-45deg);
+    top: 0;
   }
 
   .header .menu-btn:checked ~ .menu-icon .navicon::after {
     transform: rotate(45deg);
-  }
-
-  .header .menu-btn:checked ~ .menu-icon .navicon::before,
-  .header .menu-btn:checked ~ .menu-icon .navicon::after {
     top: 0;
   }
-
-  /*.navbar-menu occupe bien tout l’écran en arrière-plan */
-  .navbar-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: var(--color-black);
-    z-index: 2;
-  }
-
-
-
-
 
 
   /* Footer
@@ -613,7 +588,6 @@
     }
   }
 
-
   @media screen and (max-width: 767px) {
     :root {
       --header-padding: 2rem 0 0;
@@ -645,24 +619,16 @@
     }
   }
 
+  /* Cacher le menu burger en mode desktop */
   @media screen and (min-width: 768px) {
     .header .menu-icon {
       display: none;
     }
-
-    .navbar-menu {
-      display: block; /* Permet l'affichage horizontal */
-      position: static;
-      background-color: transparent;
-    }
-
-    .navbar-menu .nav {
-      flex-direction: row;
-      justify-content: flex-end;
-      max-height: none;
-      overflow: visible;
-    }
   }
+
+ 
+
+
 
 
 
