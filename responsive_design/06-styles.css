@@ -79,7 +79,7 @@
     --nav-item-display: inline-block;
     --nav-item-margin: 0 0 0 2rem;
     --nav-item-link-hover: var(--color-white);
-    --nav-item-margin: 0;
+    /* --nav-item-margin: 0; */
 
     /** BUTTON **/
     --button-display: inline-block;
@@ -413,6 +413,61 @@
   }
 
 
+  /* menu btn */
+  /* menu btn */
+  .header .menu-btn {
+    display: none;
+  }
+
+  .header .menu-btn:checked ~ .navbar-menu {
+    display: block;
+  }
+
+  .header .menu-btn:checked ~ .navbar-menu .nav {
+    max-height: 100%;
+    overflow: inherit;
+
+    /* Ajout pour centrer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;         /* Centrage horizontal */
+    justify-content: center;     /* Centrage vertical */
+    height: 40vh;               /*Hauteur pleine page*/
+  }
+
+  /* Animation hamburger */
+  .header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::before {
+    transform: rotate(-45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::after {
+    transform: rotate(45deg);
+  }
+
+  .header .menu-btn:checked ~ .menu-icon .navicon::before,
+  .header .menu-btn:checked ~ .menu-icon .navicon::after {
+    top: 0;
+  }
+
+  /*.navbar-menu occupe bien tout l’écran en arrière-plan */
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-black);
+    z-index: 2;
+  }
+
+
+
+
+
+
   /* Footer
       ============================= */
 
@@ -543,6 +598,73 @@
     justify-content: center;
     min-height: 35vh;
   }
+
+  @media screen and (max-width: 767px) {
+    .section-hero {
+      margin: -0.1rem 0;
+    }
+
+    .hero-homepage {
+      background-position: 85% 0;
+    }
+
+    .section-hero .section-body {
+      padding: 2rem;
+    }
+  }
+
+
+  @media screen and (max-width: 767px) {
+    :root {
+      --header-padding: 2rem 0 0;
+    }
+
+    .header {
+      background: var(--color-black);
+    }
+
+    .header-container {
+      flex-wrap: wrap;
+      padding: 0 1.5rem;
+    }
+
+    .header .menu-icon {
+      display: block;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .header-logo {
+      flex-basis: 70%;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 767px) {
+    .header-logo {
+      flex-basis: 79%;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .header .menu-icon {
+      display: none;
+    }
+
+    .navbar-menu {
+      display: block; /* Permet l'affichage horizontal */
+      position: static;
+      background-color: transparent;
+    }
+
+    .navbar-menu .nav {
+      flex-direction: row;
+      justify-content: flex-end;
+      max-height: none;
+      overflow: visible;
+    }
+  }
+
+
 
 
   /* Section Latest news
