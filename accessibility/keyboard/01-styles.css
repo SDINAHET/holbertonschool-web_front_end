@@ -695,22 +695,31 @@ ul.row {
     position: relative;
   }
 
-  .card-work .card-title {
-    opacity: 1;
-  }
+  /* .card-wor:k .card-title { */
+    /* opacity: 1; */
+    /* opacity: 0; */
+  /* } */
 
   .card-work .card-title a {
     display: block;
     padding: 2rem 1rem 0 1rem;
+    opacity: 0;
   }
 
-  .card-work:hover .card-inner {
-    background-color: transparent;
-  }
+  /* .card-work:hover .card-inner { */
+    /* background-color: transparent; */
+  /* } */
 
   .card-work:hover .card-image {
     transform: none;
   }
+
+  .card-work:hover .card-title a,
+  .card-work .card-title a:focus {
+  opacity: 1;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
 }
 
 /* Card SERVICES
