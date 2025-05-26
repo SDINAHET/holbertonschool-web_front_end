@@ -1,0 +1,58 @@
+/* Rouge principal */
+:root {
+  --main-color: #E0003C;
+  --main-color-hover: #BC1340;
+  --gray-muted: #8C8C8C;
+}
+
+/* Bouton principal (rempli) */
+.btn-primary {
+  background-color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  background-color: var(--main-color-hover);
+  border-color: var(--main-color-hover);
+}
+
+/* Bouton contour */
+.btn-outline-primary {
+  color: var(--main-color);
+  border-color: var(--main-color);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: var(--main-color);
+  color: white;
+  border-color: var(--main-color);
+}
+
+/* Liens */
+a,
+a:hover,
+a:focus {
+  color: var(--main-color);
+}
+
+/* Bordures cartes + arrondis */
+.card,
+.card-header,
+.card-footer {
+  border-color: var(--main-color);
+  border-radius: 1rem;
+}
+
+/* Fond rouge pour l’en-tête de chaque carte */
+.card-header {
+  background-color: var(--main-color);
+  color: white;
+}
+
+/* Texte grisé */
+.text-muted {
+  color: var(--gray-muted) !important;
+}
