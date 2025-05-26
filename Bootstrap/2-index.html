@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     </head>
     <body>
-        <header>
+        <!-- <header>
             <ul>
                 <li>
                     <a href="/">
@@ -23,23 +23,55 @@
                     <a href="#">Profile</a>
                 </li>
             </ul>
+        </header> -->
+
+        <header class="bg-light border-bottom py-2 mb-3">
+            <ul class="d-flex justify-content-between align-items-center list-unstyled mb-0 px-3 w-100">
+                <li>
+                <a href="/">
+                    <!-- <img class="rounded border" src="https://dummyimage.com/150x50/a6a6a6/fff.png&text=150x50" /> -->
+                    <!-- <img src="https://dummyimage.com/150x50/cccccc/e0e0e0.png&text=150+x+50" class="rounded border" width="150" height="50" alt="Logo"> -->
+                    <!-- <img src="https://dummyimage.com/150x50/cccccc/e0e0e0.png&text=150+x+50" class="rounded border" width="150" height="50" alt="Logo"> -->
+                    <img src="https://dummyimage.com/150x50/cccccc/e0e0e0.png&text=150+x+50&font-size=7" class="rounded border" width="150" height="50" alt="Logo">
+                </a>
+                </li>
+                <li class="d-flex">
+                <a href="#" class="btn btn-secondary active d-flex align-items-center mr-2">Chemical elements</a>
+                <a href="#" class="btn btn-secondary d-flex align-items-center">Profile</a>
+                </li>
+            </ul>
         </header>
 
-        <main>
+
+        <!-- <main> -->
+        <main class="container-fluid">
             <section>
-                <div role="alert">
-                    <h4>List of chemical elements</h4>
+                <!-- <div role="alert"> -->
+                <div role="alert" class="alert alert-info">
+                    <!-- <h4>List of chemical elements</h4> -->
+                    <h4 class="alert-heading">List of chemical elements</h4>
                     <p>This is a list of the 5 first chemical elements which have been identified as of 2019.</p>
                     <hr>
-                    <p>A popular visualization of all 118 elements is <a href="https://en.wikipedia.org/wiki/Periodic_table">the periodic table of the elements</a>.</p>
+                    <!-- <p>A popular visualization of all 118 elements is <a href="https://en.wikipedia.org/wiki/Periodic_table">the periodic table of the elements</a>.</p> -->
+                    <p class="mb-0">A popular visualization of all 118 elements is <a href="https://en.wikipedia.org/wiki/Periodic_table">the periodic table of the elements</a>.</p>
                 </div>
             </section>
 
             <section>
-                <h1>Chemical elements <span>only 5</span></h1>
+                <!-- <h1>Chemical elements <span>only 5</span></h1> -->
+                <!-- <h1 class="mt-5 mb-4">Chemical elements <span class="badge badge-info">only 5</span></h1> -->
+                <!-- <h1 class="mt-5 mb-4">Chemical elements <span class="badge badge-info rounded-pill">only 5</span></h1> -->
+                <h1 class="mt-5 mb-4 d-inline-flex align-items-center">
+                    Chemical elements
+                    <span class="badge badge-info rounded-pill ml-2">only 5</span>
+                </h1>
 
-                <div>
-                    <table>
+                <!-- <div> -->
+                <!-- <div class="table-responsive-lg"> -->
+                <div class="table-responsive">
+
+                    <!-- <table> -->
+                    <table class="table table-dark table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">Atomic number</th>
