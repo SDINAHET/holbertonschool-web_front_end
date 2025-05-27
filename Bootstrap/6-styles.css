@@ -5,6 +5,11 @@
   --gray-muted: #8C8C8C;
 }
 
+/* HEADER NAV: LIGNE ROUGE EN BAS */
+.border-bottom {
+  border-bottom: 1px solid var(--main-color) !important;
+}
+
 /* Bouton principal (rempli) */
 .btn-primary {
   background-color: var(--main-color);
@@ -44,6 +49,7 @@ a:focus {
 .card-footer {
   border-color: var(--main-color);
   border-radius: 1rem;
+  overflow: hidden
 }
 
 /* Fond rouge pour l’en-tête de chaque carte */
