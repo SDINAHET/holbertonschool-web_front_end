@@ -112,8 +112,10 @@ Apparence des cards (border, border-radius, text-muted)
 
 ## 🚀 Utilisation locale
 
+```bash
 git clone https://github.com/votre-utilisateur/holbertonschool-web_front_end.git
 cd holbertonschool-web_front_end/Bootstrap
+```
 
 Ouvrir chaque fichier HTML dans un navigateur moderne pour tester l’affichage responsive.
 
