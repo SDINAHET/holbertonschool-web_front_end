@@ -389,5 +389,72 @@ eFS/holbertonschool-web_front_end/Javascript_advanced# no
 de 10-prime.js
 Execution time of calculating prime numbers 100 times was 11.254985999999995 milliseconds.
 
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 11-prime.js
+Start of script
+End of script
+Execution time of calculating prime numbers 100 times was 2.6917430000000024 milliseconds.
 
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 12-room_area.js
+5000
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 13-bind_user.js
+Welcome, Guillaume. Your occupation is: Engineer
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 14-wikipedia.js
+/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Javascript_advanced/14-wikipedia.js:10
+  const xhr = new XMLHttpRequest();
+              ^
+
+ReferenceError: XMLHttpRequest is not defined
+    at queryWikipedia (/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Javascript_advanced/14-wikipedia.js:10:15)
+    at Object.<anonymous> (/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Javascript_advanced/14-wikipedia.js:31:1)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.19.0
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced#
+
+![alt text](image-3.png)
+
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 100-stock.js
+/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Javascript_advanced/100-stock.js:33
+const userInput = prompt("Please enter the item you would like to purchase (Macbook, iPhone)");
+                  ^
+
+ReferenceError: prompt is not defined
+    at Object.<anonymous> (/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Javascript_advanced/100-stock.js:33:19)
+    at Module._compile (node:internal/modules/cjs/loader:1529:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+    at Module.load (node:internal/modules/cjs/loader:1275:32)
+    at Module._load (node:internal/modules/cjs/loader:1096:12)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:164:12)
+    at node:internal/main/run_main_module:28:49
+
+Node.js v20.19.0
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced#
+
+![alt text](image-7.png)
+
+![alt text](image-4.png)
+
+![alt text](image-5.png)
+
+![alt text](image-6.png)
 
