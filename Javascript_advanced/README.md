@@ -12,17 +12,17 @@ classRoom[0]()
 
 
 
-2142:2837 
-            
-            
+2142:2837
+
+
            GET https://intranet.hbtn.io/assets/javascripts/application/custom/project_tasks.js net::ERR_ABORTED 404 (Not Found)
-2142:2865 
-            
-            
+2142:2865
+
+
            GET https://intranet.hbtn.io/assets/javascripts/applications/custom/project.js net::ERR_ABORTED 404 (Not Found)
-2142:2960 
-            
-            
+2142:2960
+
+
            GET https://www.google-analytics.com/analytics.js net::ERR_BLOCKED_BY_CLIENT
 (anonymous) @ 2142:2960
 (anonymous) @ 2142:2961
@@ -311,8 +311,9 @@ console.log(divideBy10(20));   // 2
 console.log(divideBy100(200)); // 2
 console.log(addBy1000(20));    // 1020
 
+
 undefined
-console.log(addBy100(20));  
+console.log(addBy100(20));
 undefined
 function divideBy(firstNumber) {
   return function (secondNumber) {
@@ -341,3 +342,9 @@ divideBy100(200)
 2
 addBy1000(20)
 1020
+
+
+
+
+task4
+
