@@ -348,3 +348,46 @@ addBy1000(20)
 
 task4
 
+
+![alt text](image.png)
+
+![
+
+](image-1.png)
+
+task7
+![alt text](image-2.png)
+
+task8
+
+
+node 8-payments.js
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# node 8-payments.js
+Processing orders
+12321 is being processed
+Collecting payment of 10.99
+12321 has been fully processed
+12322 is being processed
+Collecting payment of 12.99
+12322 has been fully processed
+12323 is being processed
+Collecting payment of 15
+12323 has been fully processed
+
+
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 9-prime.js
+Execution time of printing countPrimeNumbers was 0.10770500000000993 milliseconds.
+
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_sp
+eFS/holbertonschool-web_front_end/Javascript_advanced# no
+de 10-prime.js
+Execution time of calculating prime numbers 100 times was 11.254985999999995 milliseconds.
+
+
+
