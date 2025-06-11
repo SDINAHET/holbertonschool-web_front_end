@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Display Messages</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <style>
+            .message {
+                margin: 10px;
+                padding: 10px;
+                border: 1px solid #ddd;
+            }
+        </style>
+        <script type="application/javascript">
+            $(document).ready(function() {
+                // Function to display a message
+                function createMessageElement(post) {
+                    return $('<div>')
+                        .addClass('message')
+                        .append(
+                            $('<h3>').text(post.title),
+                            $('<p>').text('Author: ' + post.author)
+                        );
+                }
+
+                // Fetch and display messages
+                $.getJSON('http://localhost:3000/posts', function(posts) {
+                    const $messageList = $('#messageList');
+                    posts.forEach(function(post) {
+                        if (post.title || post.author) { // Only display non-empty posts
+                            $messageList.append(createMessageElement(post));
+                        }
+                    });
+                }).fail(function() {
+                    $('#messageList').append('<p>Error loading messages</p>');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1>Messages</h1>
+        <div id="messageList"></div>
+    </body>
+</html>

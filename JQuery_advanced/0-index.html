@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 0</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script type="application/javascript">
+            $(document).ready(function() {
+                // Verify jQuery is loaded
+                if (typeof jQuery === 'function') {
+                    $('#message').html('jQuery is working!');
+                } else {
+                    $('#message').html('jQuery is not working!');
+                }
+
+                // Add click event
+                $('#clickMe').click(function() {
+                    $(this).css('background-color', 'green');
+                    $('#message').html('Button clicked! jQuery is working!');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <button id="clickMe">Click me!</button>
+        <div id="message" style="margin-top: 20px;"></div>
+    </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8" />
+        <title>Task 12</title>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+        <style>
+            .form-group {
+                margin: 10px 0;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+            }
+            .delete-button {
+                cursor: pointer;
+                color: red;
+                margin-right: 10px;
+            }
+        </style>
+        <script type="application/javascript">
+            function addPostRow(data) {
+                const p = $('<p></p>')
+                    .attr('id', `row-${data.id}`)
+                    .append($('<span></span>')
+                        .addClass('delete-button')
+                        .text('(delete)')
+                        .click(function() {
+                            deletePost(data.id);
+                        }))
+                    .append($('<span></span>').text(`Post created with id ${data.id}, title: ${data.title}, author: ${data.author}`));
+                $('body').append(p);
+            }
+
+            function listPosts() {
+                $.get('http://localhost:3000/posts')
+                    .done(function(response) {
+                        response.forEach(function(post) {
+                            addPostRow(post);
+                        });
+                    })
+                    .fail(function() {
+                        alert('Server Error');
+                    });
+            }
+
+            function buildForm() {
+                const form = $('<form></form>');
+
+                // Author input
+                const authorDiv = $('<div></div>').addClass('form-group');
+                const authorLabel = $('<label></label>').text('Author').attr('for', 'author');
+                const authorInput = $('<input>')
+                    .attr('type', 'text')
+                    .attr('id', 'author');
+                authorDiv.append(authorLabel, authorInput);
+
+                // Title input
+                const titleDiv = $('<div></div>').addClass('form-group');
+                const titleLabel = $('<label></label>').text('Title').attr('for', 'title');
+                const titleInput = $('<textarea>').attr('id', 'title');
+                titleDiv.append(titleLabel, titleInput);
+
+                // Submit button
+                const submit = $('<input>').attr('type', 'submit');
+
+                form.append(authorDiv, titleDiv, submit);
+                $('body').append(form);
+
+                form.submit(function(e) {
+                    e.preventDefault();
+                    sendForm();
+                });
+            }
+
+            function sendForm() {
+                const data = {
+                    title: $('#title').val(),
+                    author: $('#author').val()
+                };
+
+                $('form').after('<p>About to send the query to the API</p>');
+
+                $.post('http://localhost:3000/posts', data)
+                    .done(function(response) {
+                        addPostRow(response);
+                    })
+                    .fail(function() {
+                        alert('Error sending the POST query');
+                    });
+            }
+
+            function deletePost(id) {
+                $.ajax({
+                    url: `http://localhost:3000/posts/${id}`,
+                    type: 'DELETE',
+                    success: function() {
+                        $(`#row-${id}`).remove();
+                    },
+                    error: function() {
+                        alert('Post was not deleted');
+                    }
+                });
+            }
+
+            $(document).ready(function() {
+                listPosts();
+                buildForm();
+            });
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
