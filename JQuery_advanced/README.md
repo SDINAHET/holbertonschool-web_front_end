@@ -201,3 +201,22 @@ Ce projet se concentre sur les concepts et pratiques avancés de jQuery. Il comp
 - jQuery
 - JSON Server
 - API Wikipedia
+
+
+✅ Étapes préalables (à faire en local) :
+Installer json-server :
+
+bash
+Copier
+Modifier
+npm install json-server
+Créer un fichier db.json contenant ce que tu as posté.
+
+Lancer le serveur local :
+
+bash
+Copier
+Modifier
+npx json-server --watch db.json
+Par défaut, cela démarre à l’adresse : http://localhost:3000
+

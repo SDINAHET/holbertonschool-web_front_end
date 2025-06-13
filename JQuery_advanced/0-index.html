@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Task 0</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script type="application/javascript">
-            $(document).ready(function() {
-                // Verify jQuery is loaded
-                if (typeof jQuery === 'function') {
-                    $('#message').html('jQuery is working!');
-                } else {
-                    $('#message').html('jQuery is not working!');
-                }
+  <head>
+    <meta charset="utf-8" />
+    <title>Task 0</title>
 
-                // Add click event
-                $('#clickMe').click(function() {
-                    $(this).css('background-color', 'green');
-                    $('#message').html('Button clicked! jQuery is working!');
-                });
-            });
-        </script>
-    </head>
-    <body>
-        <button id="clickMe">Click me!</button>
-        <div id="message" style="margin-top: 20px;"></div>
-    </body>
+    <!-- ✅ jQuery Slim & minifié depuis le CDN officiel -->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+
+    <!-- ✅ Vérification dans un script JS -->
+    <script type="application/javascript">
+      $(document).ready(function () {
+        if (typeof jQuery === 'function') {
+          console.log('jQuery has been loaded correctly');
+        } else {
+          console.log('jQuery has not been loaded correctly');
+        }
+      });
+    </script>
+  </head>
+
+  <body>
+  </body>
 </html>
+

@@ -1,66 +1,98 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Task 7</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-        <style>
-            .loading {
-                opacity: 0.2;
-            }
-        </style>
-        <script type="application/javascript">
-            function createSearchForm() {
-                const form = $('<form></form>');
-                const input = $('<input>').attr('type', 'text');
-                const submit = $('<input>').attr('type', 'submit');
-                const ul = $('<ul></ul>');
+<head>
+  <meta charset="utf-8" />
+  <title>Task 7</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-                form.append(input, submit);
-                $('body').append(form, ul);
+    input[type="text"] {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
 
-                form.submit(function(e) {
-                    e.preventDefault();
-                    queryWikipedia(input.val());
-                });
-            }
+    input[type="submit"] {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: black;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-            function addNewArticle(id, title, snippet) {
-                const li = $('<li></li>');
-                const firstP = $('<p></p>')
-                    .append($('<span></span>').text(id + ' - '))
-                    .append($('<b></b>').text(title));
-                const secondP = $('<p></p>').html(snippet);
+    li {
+      margin-bottom: 15px;
+    }
 
-                li.append(firstP, secondP);
-                $('ul').append(li);
-            }
+    span {
+      font-weight: normal;
+    }
+  </style>
+  <script type="application/javascript">
+    function createSearchForm() {
+      const form = $('<form></form>');
+      const input = $('<input type="text">');
+      const submit = $('<input type="submit" value="Submit">');
+      const resultsList = $('<ul></ul>');
 
-            function queryWikipedia(search) {
-                const data = {
-                    action: 'query',
-                    list: 'search',
-                    srsearch: search,
-                    format: 'json',
-                    origin: '*'
-                };
+      form.append(input, submit);
+      $('body').append(form, resultsList);
 
-                $.ajax({
-                    url: 'https://en.wikipedia.org/w/api.php',
-                    data: data,
-                    success: function(response) {
-                        response.query.search.forEach(function(result) {
-                            addNewArticle(result.pageid, result.title, result.snippet);
-                        });
-                    }
-                });
-            }
+      form.submit(function (e) {
+        e.preventDefault();
+        const search = input.val();
+        queryWikipedia(search);
+      });
+    }
 
-            $(document).ready(function() {
-                createSearchForm();
-            });
-        </script>
-    </head>
-    <body>
-    </body>
+    function addNewArticle(id, title, snippet) {
+      const li = $('<li></li>');
+      const p1 = $('<p></p>').html(`<span>${id} - </span><b>${title}</b>`);
+      const p2 = $('<p></p>').html(snippet); // Important: use .html() to keep formatting
+
+      li.append(p1, p2);
+      $('ul').append(li);
+    }
+
+    function queryWikipedia(search) {
+      const data = {
+        action: 'query',
+        list: 'search',
+        srsearch: search,
+        format: 'json',
+        origin: '*'
+      };
+
+      $.ajax({
+        url: 'https://en.wikipedia.org/w/api.php',
+        method: 'GET',
+        data: data,
+        success: function (res) {
+          $('ul').empty(); // Clear previous results
+          const results = res.query.search;
+          results.forEach(article => {
+            addNewArticle(article.pageid, article.title, article.snippet);
+          });
+        },
+        error: function () {
+          console.log('Failed to fetch Wikipedia results');
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      createSearchForm();
+    });
+  </script>
+</head>
+<body>
+</body>
 </html>

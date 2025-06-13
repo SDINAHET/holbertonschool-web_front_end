@@ -1,91 +1,177 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8" />
-        <title>Task 6</title>
-        <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM4=" crossorigin="anonymous"></script>
-        <style>
-            .remove-cell {
-                cursor: pointer;
-                background-color: orange;
-            }
-        </style>
-        <script type="application/javascript">
-            function createFamilyTree() {
-                const table = $('<table></table>');
-                const thead = $('<thead></thead>');
-                const tbody = $('<tbody></tbody>');
+<head>
+  <meta charset="utf-8" />
+  <title>Task 6</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
 
-                thead.append(
-                    $('<tr></tr>')
-                        .append($('<th></th>').text('Firstname'))
-                        .append($('<th></th>').text('Lastname'))
-                );
+    form {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
 
-                table.append(thead, tbody);
-                $('body').append(table);
-            }
+    input[type="text"] {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      outline: none;
+    }
 
-            function addNewMember(firstName, lastName, position) {
-                const row = $('<tr></tr>')
-                    .append($('<td></td>').text(firstName))
-                    .append($('<td></td>').text(lastName))
-                    .append(
-                        $('<td></td>')
-                            .text('(x)')
-                            .addClass('remove-cell')
-                            .click(function() {
-                                $(this).closest('tr').remove();
-                            })
-                    );
+    .select-wrapper {
+      position: relative;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: white;
+      overflow: hidden;
+      height: 34px;
+    }
 
-                if (position === 'before') {
-                    $('tbody').prepend(row);
-                } else {
-                    $('tbody').append(row);
-                }
-            }
+    .select-wrapper select {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      border: none;
+      background-color: transparent;
+      padding: 6px 30px 6px 10px;
+      font-size: 14px;
+      height: 100%;
+      width: 100%;
+      cursor: pointer;
+      position: relative;
+      z-index: 1;
+    }
 
-            function createForm() {
-                const form = $('<form></form>');
+    .select-wrapper::after {
+      content: "▴▾";
+      font-size: 10px;
+      line-height: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 30px;
+      background-color: #4CAF50;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      border-left: 1px solid #ccc;
+      border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+    }
 
-                // Create first name input
-                form.append($('<input>').attr('type', 'text').attr('placeholder', 'First Name'));
+    input[type="submit"] {
+      padding: 6px 12px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      background-color: white;
+      color: black;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-                // Create last name input
-                form.append($('<input>').attr('type', 'text').attr('placeholder', 'Last Name'));
+    table {
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
 
-                // Create position select
-                const select = $('<select></select>')
-                    .append($('<option></option>').val('before').text('Before'))
-                    .append($('<option></option>').val('after').text('After'));
-                form.append(select);
+    .remove-cell {
+      cursor: pointer;
+      background-color: orange;
+      padding: 4px 8px;
+      border-radius: 4px;
+    }
+  </style>
+  <script type="application/javascript">
+    function createFamilyTree() {
+      const table = $('<table></table>');
+      const thead = $('<thead></thead>');
+      const tbody = $('<tbody></tbody>');
 
-                // Create submit button
-                form.append($('<input>').attr('type', 'submit').val('Submit'));
+      thead.append(
+        $('<tr></tr>')
+          .append($('<th></th>').text('Firstname'))
+          .append($('<th></th>').text('Lastname'))
+      );
 
-                // Add form submission handler
-                form.submit(function(e) {
-                    e.preventDefault();
-                    const inputs = $(this).find('input[type="text"]');
-                    const firstName = inputs.first().val();
-                    const lastName = inputs.eq(1).val();
-                    const position = $(this).find('select').val();
+      table.append(thead, tbody);
+      $('body').append(table);
+    }
 
-                    addNewMember(firstName, lastName, position);
-                    inputs.val(''); // Clear the inputs
-                });
+    function addNewMember(firstName, lastName, position) {
+      const row = $('<tr></tr>')
+        .append($('<td></td>').text(firstName))
+        .append($('<td></td>').text(lastName))
+        .append(
+          $('<td></td>')
+            .text('(x)')
+            .addClass('remove-cell')
+            .click(function () {
+              $(this).closest('tr').remove();
+            })
+        );
 
-                // Add form before the table
-                $('table').before(form);
-            }
+      if (position === 'before') {
+        $('tbody').prepend(row);
+      } else {
+        $('tbody').append(row);
+      }
+    }
 
-            $(document).ready(function() {
-                createFamilyTree();
-                createForm();
-            });
-        </script>
-    </head>
-    <body>
-    </body>
+    function createForm() {
+      const form = $('<form></form>');
+
+      form.append($('<input>').attr('type', 'text').attr('placeholder', 'First Name'));
+      form.append($('<input>').attr('type', 'text').attr('placeholder', 'Last Name'));
+
+      const selectWrapper = $('<div class="select-wrapper"></div>');
+      const select = $('<select></select>')
+        .append($('<option></option>').val('before').text('Before'))
+        .append($('<option></option>').val('after').text('After'));
+
+      selectWrapper.append(select);
+      form.append(selectWrapper);
+      form.append($('<input>').attr('type', 'submit').val('Submit'));
+
+      form.submit(function (e) {
+        e.preventDefault();
+
+        const firstName = $('form input:first-of-type').val();
+        const lastName = $('form input:nth-of-type(2)').val();
+        const position = $('form select').val();
+
+        addNewMember(firstName, lastName, position);
+
+        $(this).find('input[type="text"]').val('');
+      });
+
+      $('table').before(form);
+    }
+
+    $(document).ready(function () {
+      createFamilyTree();
+      createForm();
+
+      // ✅ Ajout des membres par défaut (comme demandé)
+      addNewMember('Guillaume', 'Salva', 'after');
+      addNewMember('Arielle', 'Snizt', 'after');
+      addNewMember('Fanette', 'Snizt', 'after');
+      addNewMember('Gerard', 'Snizt', 'after');
+      addNewMember('Victor', 'Salva', 'after');
+    });
+  </script>
+</head>
+<body></body>
 </html>
