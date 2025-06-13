@@ -24,8 +24,6 @@
     function listPosts() {
       $.get('http://localhost:3000/posts')
         .done(function(response) {
-          // ✅ Trie les résultats par ID croissant (numérique)
-          response.sort((a, b) => Number(b.id) - Number(a.id));
           response.forEach(function(post) {
             addPostRow(post);
           });
@@ -34,7 +32,6 @@
           alert('Server Error');
         });
     }
-
 
     function buildForm() {
       const form = $('<form></form>');
@@ -66,18 +63,14 @@
     }
 
     function sendForm() {
-      const title = $('#title').val().trim();
-      const author = $('#author').val().trim();
-
-      if (!title || !author) {
-        alert('Please fill in both Title and Author.');
-        return;
-      }
-
-      const data = { title: title, author: author };
+      const data = {
+        title: $('#title').val(),
+        author: $('#author').val()
+      };
 
       $('form').after('<p>About to send the query to the API</p>');
 
+      // ✅ Utilisation de $.ajax avec contentType JSON
       $.ajax({
         url: 'http://localhost:3000/posts',
         method: 'POST',
@@ -85,16 +78,12 @@
         data: JSON.stringify(data),
         success: function(response) {
           addPostRow(response);
-          // Vide les champs
-          $('#title').val('');
-          $('#author').val('');
         },
         error: function() {
           alert('Error sending the POST query');
         }
       });
     }
-
 
     $(document).ready(function() {
       listPosts();
