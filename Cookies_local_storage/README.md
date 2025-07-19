@@ -114,7 +114,7 @@ npx webpack serve
 ![alt text](image-5.png)
 
 # task6
-
+![alt text](image-6.png)
 
 # task7
 
