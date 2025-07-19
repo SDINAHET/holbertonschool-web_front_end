@@ -127,3 +127,29 @@ http://localhost:8081/6-index.html
 http://localhost:8081/7-index.html
 ![alt text](image-7.png)
 ![alt text](image-8.png)
+
+
+
+
+
+root@UID7E:/mnt/d/Users/steph/Documents/4ème_trimestre_
+speFS/holbertonschool-web_front_end/Cookies_local_storage# npx webpack serve
+<i> [webpack-dev-server] Project is running at:
+<i> [webpack-dev-server] Loopback: http://localhost:8081/, http://[::1]:8081/
+<i> [webpack-dev-server] On Your Network (IPv4): http://172.18.71.179:8081/
+<i> [webpack-dev-server] Content not from webpack is served from '/mnt/d/Users/steph/Documents/4ème_trimestre_speFS/holbertonschool-web_front_end/Cookies_local_storage/' directory
+<i> [webpack-dev-middleware] wait until bundle finished: /
+asset main.js 169 KiB [emitted] (name: main)
+runtime modules 27.4 KiB 12 modules
+modules by path ./node_modules/ 109 KiB
+  modules by path ./node_modules/webpack-dev-server/client/ 84.8 KiB
+    modules by path ./node_modules/webpack-dev-server/client/*.js 53.3 KiB 4 modules
+    ./node_modules/webpack/hot/log.js 1.73 KiB [built] [code generated]
+    ./node_modules/webpack/hot/emitter.js 75 bytes [built] [code generated]
+    ./node_modules/webpack/hot/log-apply-result.js 1.43    ./node_modules/webpack/hot/log.js 1.73 KiB [built] [code generated]
+    ./node_modules/webpack/hot/emitter.js 75 bytes [built] [code generated]
+    ./node_modules/webpack/hot/log-apply-result.js 1.43 KiB [built] [code generated]
+  ./node_modules/events/events.js 14.5 KiB [built] [code generated]
+  ./node_modules/ansi-html-community/index.js 4.16 KiB [built] [code generated]
+./src/index.js 1 bytes [built] [code generated]
+webpack 5.100.2 compiled successfully in 15030 ms
