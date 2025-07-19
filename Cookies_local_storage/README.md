@@ -93,3 +93,28 @@ speFS/holbertonschool-web_front_end/Cookies_local_storage#
 
 
 npx webpack serve
+
+
+# task0
+![alt text](image.png)
+
+# task1
+![alt text](image-1.png)
+
+# task2
+![alt text](image-2.png)
+
+# task3
+![alt text](image-3.png)
+
+# task4
+![alt text](image-4.png)
+
+# task5
+![alt text](image-5.png)
+
+# task6
+
+
+# task7
+
