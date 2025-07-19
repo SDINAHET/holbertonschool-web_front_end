@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Advanced Shopping Cart</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+</head>
+<body class="p-4">
+  <script>
+    const availableItems = ["Shampoo", "Soap", "Sponge", "Water"];
+
+    function isSessionStorageAvailable() {
+      try {
+        const test = '__test__';
+        sessionStorage.setItem(test, test);
+        sessionStorage.removeItem(test);
+        return true;
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function getCartFromStorage() {
+      const cart = sessionStorage.getItem("cart");
+      return cart ? JSON.parse(cart) : {};
+    }
+
+    function saveCartToStorage(cart) {
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+    }
+
+    function addItemToCart(item) {
+      const cart = getCartFromStorage();
+      if (cart[item]) {
+        cart[item] += 1;
+      } else {
+        cart[item] = 1;
+      }
+      saveCartToStorage(cart);
+      displayCart();
+    }
+
+    function removeItemfromCart(item) {
+      const cart = getCartFromStorage();
+      delete cart[item];
+      saveCartToStorage(cart);
+      displayCart();
+    }
+
+    function clearCart() {
+      sessionStorage.clear();
+      displayCart();
+    }
+
+    function createStore() {
+      const h2 = document.createElement("h2");
+      h2.textContent = "Available products:";
+      document.body.appendChild(h2);
+
+      const ul = document.createElement("ul");
+      ul.className = "list-group mb-4";
+
+      availableItems.forEach(item => {
+        const li = document.createElement("li");
+        li.className = "list-group-item list-group-item-action";
+        li.textContent = item;
+        li.style.cursor = "pointer";
+        li.onclick = () => addItemToCart(item);
+        ul.appendChild(li);
+      });
+
+      document.body.appendChild(ul);
+    }
+
+    function displayCart() {
+      let h2 = document.getElementById("cart-title");
+      if (!h2) {
+        h2 = document.createElement("h2");
+        h2.textContent = "Your cart:";
+        h2.id = "cart-title";
+        document.body.appendChild(h2);
+      }
+
+      let cartDiv = document.getElementById("cart");
+      if (!cartDiv) {
+        cartDiv = document.createElement("div");
+        cartDiv.id = "cart";
+        document.body.appendChild(cartDiv);
+      }
+
+      // Clear previous content
+      cartDiv.innerHTML = "";
+      updateCart();
+    }
+
+    function updateCart() {
+      const cart = getCartFromStorage();
+      const cartDiv = document.getElementById("cart");
+      const ul = document.createElement("ul");
+      ul.className = "list-group";
+
+      // Clear cart button
+      const clearLi = document.createElement("li");
+      clearLi.className = "list-group-item list-group-item-danger";
+      clearLi.style.cursor = "pointer";
+      clearLi.textContent = "Clear my cart";
+      clearLi.onclick = clearCart;
+      ul.appendChild(clearLi);
+
+      const cartKeys = Object.keys(cart);
+      if (cartKeys.length === 0) {
+        const li = document.createElement("li");
+        li.className = "list-group-item";
+        li.textContent = "Your cart is empty";
+        ul.appendChild(li);
+      } else {
+        cartKeys.forEach(item => {
+          const li = document.createElement("li");
+          li.className = "list-group-item d-flex justify-content-between align-items-center";
+          li.innerHTML = `${item} x ${cart[item]} <span class="text-danger" style="cursor:pointer;" onclick="removeItemfromCart('${item}')">(remove)</span>`;
+          ul.appendChild(li);
+        });
+      }
+
+      cartDiv.appendChild(ul);
+    }
+
+    // Initialisation au chargement
+    window.onload = () => {
+      if (!isSessionStorageAvailable()) {
+        alert("Sorry, your browser does not support Web storage. Try again with a better one");
+        return;
+      }
+
+      createStore();
+      displayCart();
+    };
+  </script>
+</body>
+</html>

@@ -96,25 +96,34 @@ npx webpack serve
 
 
 # task0
+http://localhost:8081/0-index.html
 ![alt text](image.png)
 
 # task1
+http://localhost:8081/1-index.html
 ![alt text](image-1.png)
 
 # task2
+http://localhost:8081/2-index.html
 ![alt text](image-2.png)
 
 # task3
+http://localhost:8081/3-index.html
 ![alt text](image-3.png)
 
 # task4
+http://localhost:8081/4-index.html
 ![alt text](image-4.png)
 
 # task5
+http://localhost:8081/5-index.html
 ![alt text](image-5.png)
 
 # task6
+http://localhost:8081/6-index.html
 ![alt text](image-6.png)
 
 # task7
-
+http://localhost:8081/7-index.html
+![alt text](image-7.png)
+![alt text](image-8.png)
