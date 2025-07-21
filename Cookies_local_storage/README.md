@@ -1,3 +1,91 @@
+# 🟪 Titre du projet
+# 🧩 Cookies & Local Storage
+# 📁 Dossier : Cookies_local_storage
+# 📚 Projet du repository holbertonschool-web_front_end
+
+# 🎯 Objectifs pédagogiques
+Créer, lire et supprimer des cookies en JavaScript
+
+Gérer les options de cookies (expiration, path…)
+
+Utiliser la bibliothèque js-cookie
+
+Différencier localStorage et sessionStorage
+
+Créer une mini application de panier d’achat
+
+# 🛠️ Technologies utilisées
+Vanilla JavaScript (ES6)
+
+HTML5
+
+Web Storage API (localStorage, sessionStorage)
+
+js-cookie (via CDN)
+
+Webpack / Node.js v12.x / npm 6.x
+
+# 📂 Structure du projet
+Fichier	Fonction
+0-index.html	Création de cookies de base
+1-index.html	Cookies avec expiration + path
+2-index.html	Lecture des cookies
+3-index.html	Login + message de bienvenue
+4-index.html	Intégration js-cookie
+5-index.html	Panier avec localStorage
+6-index.html	Panier avec sessionStorage
+7-index.html	Panier complet (ajout, suppression, quantité)
+
+# ⚙️ Instructions pour tester
+```bash
+npm install
+npx webpack-dev-server
+```
+Puis ouvrir dans le navigateur :
+
+http://localhost:8080/0-index.html
+
+...
+
+http://localhost:8080/7-index.html
+
+# 🧪 Vérifications
+✅ Manipulation DOM uniquement via JS
+
+✅ Cookies avec expiration (10 jours)
+
+✅ SessionStorage : perte des données après fermeture de l’onglet
+
+✅ Utilisation correcte de JSON.stringify / parse
+
+✅ src/index.js reste vide (Webpack setup)
+
+# 📌 Tâches à valider
+Tâche	Description	Statut
+0	Créer cookie de base	🔲
+1	Ajouter expiration et chemin	🔲
+2	Lire les cookies	🔲
+3	Message de bienvenue / logout	🔲
+4	Utiliser js-cookie (get/set/remove)	🔲
+5	Panier localStorage	🔲
+6	Panier sessionStorage	🔲
+7	Panier avancé avec suppression/clear	🔲
+
+
+# 🧑‍🏫 Manual Review attendue
+Merci de bien vouloir effectuer une relecture manuelle du projet après validation des tâches.
+N’hésitez pas à me faire part de vos remarques 🙏
+
+# 👨‍💻 Auteur
+👤 Stéphane Dinahet
+
+# 🔗 GitHub Project Link
+
+# 📍 Spécialisation Web Front-End – Holberton School Rennes
+
+
+
+
 
 
 
